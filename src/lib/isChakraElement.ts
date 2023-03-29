@@ -1,5 +1,5 @@
-import { TSESTree, ParserServices } from "@typescript-eslint/utils";
-import { Declaration, ImportDeclaration, Symbol, SyntaxKind, Expression } from "typescript";
+import { ParserServices, TSESTree } from "@typescript-eslint/utils";
+import { Declaration, Expression, ImportDeclaration, Symbol, SyntaxKind } from "typescript";
 
 export function isChakraElement(node: TSESTree.JSXOpeningElement, parserServices: ParserServices): boolean {
   const typeChecker = parserServices.program.getTypeChecker();
@@ -12,7 +12,7 @@ export function isChakraElement(node: TSESTree.JSXOpeningElement, parserServices
 
   const specifier = getModuleSpecifierOfImportSpecifier(symbol);
 
-  return specifier === "@chakra-ui/react";
+  return !!specifier?.startsWith('@base-ui/')
 }
 
 // eslint-disable-next-line @typescript-eslint/ban-types -- This Symbol is imported from "typescript"
