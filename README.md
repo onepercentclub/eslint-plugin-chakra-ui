@@ -1,7 +1,7 @@
-# eslint-plugin-chakra-ui
+# teamgoodup-eslint-plugin-chakra-ui
 
-[![npm](https://img.shields.io/npm/v/eslint-plugin-chakra-ui)](https://www.npmjs.com/package/eslint-plugin-chakra-ui)
-[![license](https://img.shields.io/npm/l/eslint-plugin-chakra-ui)](https://github.com/yukukotani/eslint-plugin-chakra-ui/blob/main/LICENSE)
+[![npm](https://img.shields.io/npm/v/eslint-plugin-chakra-ui)](https://www.npmjs.com/package/teamgoodup-eslint-plugin-chakra-ui)
+[![license](https://img.shields.io/npm/l/eslint-plugin-chakra-ui)](https://github.com/yukukotani/teamgoodup-eslint-plugin-chakra-ui/blob/main/LICENSE)
 
 ESLint rules for [Chakra UI](https://chakra-ui.com/).
 
@@ -19,10 +19,10 @@ You'll first need to install [ESLint](https://eslint.org/):
 npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-chakra-ui`, `@typescript-eslint/parser`:
+Next, install `teamgoodup-eslint-plugin-chakra-ui`, `@typescript-eslint/parser`:
 
 ```sh
-npm install eslint-plugin-chakra-ui @typescript-eslint/parser --save-dev
+npm install teamgoodup-eslint-plugin-chakra-ui @typescript-eslint/parser --save-dev
 ```
 
 Then set the `parser` property and add `chakra-ui` to the `plugins` property of your `.eslintrc` configuration file:
@@ -39,9 +39,7 @@ Now you can add chakra-ui rules:
 ```json
 {
   "rules": {
-    "chakra-ui/props-order": "error",
-    "chakra-ui/props-shorthand": "error",
-    "chakra-ui/require-specific-component": "error"
+    "chakra-ui/props-shorthand": "error"
   }
 }
 ```
